@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found · The Sugar Drop</title>
+<meta name="robots" content="noindex">
+<script>
+  // Old Squarespace addresses -> new pages. Works at the domain root or under a /thesugardrop/ project path.
+  (function () {
+    var base = location.pathname.indexOf('/thesugardrop/') === 0 ? '/thesugardrop/' : '/';
+    var map = {
+      'work': 'gallery.html',
+      'cookies-1': 'flavors.html#cookies',
+      'new-gallery-1': 'gallery.html#special-occasion',
+      'wedding-cakes': 'gallery.html#wedding-cakes',
+      'character-cakes': 'gallery.html#character-cakes',
+      'designer-cupcakes': 'gallery.html#cupcakes',
+      'cookies': 'gallery.html#cookies',
+      'new-gallery-2': 'gallery.html#cake-pops',
+      'dessert-tables-and-sets': 'gallery.html#dessert-tables',
+      'petit-fours': 'gallery.html',
+      'buttercream-sugar-cookies': 'gallery.html#sugar-drops-treats',
+      'flavors': 'flavors.html',
+      'about': 'about.html',
+      'contact': 'contact.html'
+    };
+    var first = location.pathname.slice(base.length).split('/')[0].toLowerCase();
+    if (map[first]) location.replace(base + map[first]);
+    window.SITE_BASE = base;
+  })();
+</script>
+<style>
+  body{margin:0;min-height:100vh;display:grid;place-items:center;background:#FBF6F0;color:#3B2E2A;font-family:'Jost',system-ui,-apple-system,'Segoe UI',sans-serif;text-align:center;padding:24px}
+  h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:clamp(40px,7vw,64px);margin:18px 0 10px}
+  h1 em{color:#9C4A5E}
+  p{color:#76635D;font-size:18px;margin:0 0 28px}
+  a.btn{display:inline-block;background:#9C4A5E;color:#fff;text-decoration:none;padding:14px 28px;border-radius:999px;margin:6px}
+  a.btn.ghost{background:transparent;color:#3B2E2A;border:1px solid #3B2E2A}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <svg width="54" height="68" viewBox="0 0 30 38" aria-hidden="true"><path d="M15 2.5S3.5 16.2 3.5 24.6a11.5 11.5 0 0 0 23 0C26.5 16.2 15 2.5 15 2.5z" fill="#F3D3D5" stroke="#9C4A5E" stroke-width="1.6"/><path d="M9.2 24.8a6 6 0 0 0 4.6 5.6" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>
+    <h1>This page has been <em>eaten</em></h1>
+    <p>We couldn&rsquo;t find what you were looking for, but there&rsquo;s plenty more to see.</p>
+    <a class="btn" id="home" href="/">Back to the home page</a>
+    <a class="btn ghost" id="gal" href="/gallery.html">Browse the gallery</a>
+  </main>
+  <script>
+    document.getElementById('home').href = window.SITE_BASE;
+    document.getElementById('gal').href = window.SITE_BASE + 'gallery.html';
+  </script>
+</body>
+</html>
