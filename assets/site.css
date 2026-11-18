@@ -41,7 +41,6 @@ p{margin:0 0 1em}
 .site-header.scrolled{border-bottom-color:var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:82px}
 .brand{display:flex;align-items:center;gap:12px;color:var(--ink);text-decoration:none}
-.brand svg{width:30px;height:38px;flex:none}
 .brand-text{display:flex;flex-direction:column;line-height:1}
 .brand-name{font-family:var(--serif);font-size:29px;font-weight:600;letter-spacing:.01em}
 .brand-name em{font-style:italic;font-weight:500;color:var(--rose)}
